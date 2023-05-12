@@ -11,7 +11,15 @@ import TrekForTrees from '../views/portfolio-projects/TrekForTrees.vue';
 import LifeAquatic from '../views/portfolio-projects/LifeAquatic.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  {
+    path: '/',
+    redirect: { name: 'Home' }
+  },
+  {
+    path: '/caryllou-portfolio-v2/',
+    name: 'Home',
+    component: Home
+  },
   { path: '/about', component: About },
   { path: '/resume', component: Resume },
   {
