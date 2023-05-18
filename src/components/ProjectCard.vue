@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-      <router-link :to="'/portfolio/' + titleURL">
+      <router-link :to="'/caryllou-portfolio-v2/portfolio/' + titleURL">
         <div class="card-header">
           <h1 class="card-number">{{ number }}</h1>
           <div class="card-divider" />

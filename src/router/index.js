@@ -20,10 +20,10 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  { path: '/about', component: About },
-  { path: '/resume', component: Resume },
+  { path: '/caryllou-portfolio-v2/about', component: About },
+  { path: '/caryllou-portfolio-v2/resume', component: Resume },
   {
-    path: '/portfolio',
+    path: '/caryllou-portfolio-v2/portfolio',
     component: PortfolioLayout,
     children: [
       { path: '', component: Portfolio },
