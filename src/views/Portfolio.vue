@@ -55,7 +55,7 @@ export default {
             desktop: require('@/assets/images/portfolio-project-cards/Trek_2x.png')
           },
           number: "03",
-          title: "Trek",
+          title: "Trek for Trees",
           titleURL: "trek-for-trees"
         },
         {

@@ -18,6 +18,7 @@ import Portfolio from './Portfolio.vue';
 
 export default {
   name: 'HomePage',
+  emits: ['vnode-unmounted'],
   components: {
     Portfolio,
   },
