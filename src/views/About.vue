@@ -15,6 +15,24 @@
           try a new recipe, play video games or take a road trip somewhere.
         </p>
         <p class="card-text"> Based in Las Vegas, NV.</p>
+        <div class="card-divider"></div>
+      </div>
+      <div class="card-footer bg-transparent">
+        <p>Find me here:</p>
+        <div class="icon-container d-flex flex-wrap justify-content-evenly">
+          <a href="mailto: clpaayas@gmail.com">
+            <font-awesome-icon :icon="['fas', 'envelope']" size="2x" class="icon icon-blue" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <font-awesome-icon :icon="['fab', 'instagram']" size="2x" class="icon icon-blue" />
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" class="icon icon-blue" />
+          </a>
+          <a href="https://www.behance.net/" target="_blank">
+            <font-awesome-icon :icon="['fab', 'behance']" size="2x" class="icon icon-blue" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -34,7 +52,7 @@ export default {
     return {
       images: {
         mobile: require('../assets/images/about-view/about.png'),
-        desktop: require('../assets/images/about-view/about_2x.png')
+        desktop: require('../assets/images/about-view/about_2x.png'),
       }
     }
   }
@@ -42,6 +60,10 @@ export default {
 </script>
 
 <style scoped>
+.icon-blue {
+  color: #1d5d86;
+}
+
 .image-container {
   max-width: 320px;
   margin: 0 auto;
@@ -50,8 +72,23 @@ export default {
 .card {
   padding: 1rem;
 }
+.card-divider {
+  width: 50%;
+  height: 2px;
+  background-color: #a5b49d;
+  margin: 0.5rem auto;
+}
+
+.card-footer {
+  border: none;
+}
 
 @media (min-width: 856px) {
+  .icon-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
   .image-container {
     max-width: 786px;
   }
