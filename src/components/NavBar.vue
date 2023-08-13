@@ -44,4 +44,15 @@ export default {
 .nav-link, .navbar-brand {
   color: #fff3e8;
 }
+
+.router-link-active {
+  background: none repeat scroll 0 0 #007ABD;
+    color: white;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transition: border-color 0.8s;
+    transition: border-color 0.8s;
+    padding-bottom: 16px;
+    border-radius: 10px;
+}
 </style>

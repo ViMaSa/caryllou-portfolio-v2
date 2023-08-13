@@ -3,6 +3,7 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Portfolio from '../views/Portfolio.vue';
 import Resume from '../views/Resume.vue';
+import NotFound from '../views/NotFound.vue';
 import PortfolioLayout from '../components/PortfolioLayout.vue';
 
 import Colliers from '../views/portfolio-projects/Colliers.vue';
@@ -33,6 +34,7 @@ const routes = [
       { path: 'life-aquatic', component: LifeAquatic }
     ]
   },
+  { path: '/:catchAll(.*)', component: NotFound }
 ];
 
 const router = createRouter({

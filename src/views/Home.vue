@@ -1,10 +1,10 @@
 <template>
   <div class="home d-flex justify-content-center align-items-center">
     <div class="card card-center card-transparent text-center">
-      <div class="card-body">
+      <div class="card-body" @click="scrollToPortfolio">
         <h5 class="card-title">Caryl Lou Paayas</h5>
         <p class="card-text">[ka•reel loo pa•ah•yas]</p>
-        <div class="bounce-arrow" @click="scrollToPortfolio">
+        <div class="bounce-arrow">
           <font-awesome-icon icon="chevron-down" size="lg"/>
         </div>
       </div>
