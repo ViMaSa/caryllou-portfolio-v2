@@ -13,12 +13,12 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" ref="navbarCollapse">
         <div class="navbar-nav ms-auto">
-          <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
-          <router-link class="nav-link" to="/caryllou-portfolio-v2/about">About</router-link>
-          <router-link class="nav-link" to="/caryllou-portfolio-v2/portfolio">Portfolio</router-link>
-          <router-link class="nav-link" to="/caryllou-portfolio-v2/resume">Resume</router-link>
+          <router-link class="nav-link active" aria-current="page" to="/" @click="closeNavbar">Home</router-link>
+          <router-link class="nav-link" to="/caryllou-portfolio-v2/about" @click="closeNavbar">About</router-link>
+          <router-link class="nav-link" to="/caryllou-portfolio-v2/portfolio" @click="closeNavbar">Portfolio</router-link>
+          <router-link class="nav-link" to="/caryllou-portfolio-v2/resume" @click="closeNavbar">Resume</router-link>
         </div>
       </div>
     </div>
@@ -28,11 +28,17 @@
 <script>
 export default {
   name: 'NavBar',
+  methods: {
+    closeNavbar() {
+      if (this.$refs.navbarCollapse.classList.contains('show')) {
+        this.$refs.navbarCollapse.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
-
 .navbar-toggler {
   border-color: #fff3e8;
 }
