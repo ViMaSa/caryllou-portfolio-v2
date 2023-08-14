@@ -90,7 +90,7 @@ export default {
   }
 
   .image-container {
-    max-width: 786px;
+    max-width: 750px;
   }
 }
 </style>

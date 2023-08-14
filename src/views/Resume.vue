@@ -68,7 +68,7 @@ export default {
 
 @media (min-width: 856px) {
   .resume-container {
-    max-width: 700px;
+    max-width: 750px;
   }
 }
 </style>
