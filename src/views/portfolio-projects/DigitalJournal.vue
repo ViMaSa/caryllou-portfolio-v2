@@ -6,8 +6,7 @@
           01
         </h2>
         <div class="card-divider"/>
-        <div class="card-title"><strong>
-
+        <div class="card-title strong"><strong>
           Digital Journal
         </strong></div>
         <div class="card-divider"/>
@@ -18,16 +17,75 @@
         </div>
       </div>
     </div>
+    <div v-for="(card) in cards" :key="card.id">
+      <div class="card">
+        <picture>
+          <source :srcset="card.desktopImage" media="(min-width: 750px)" />
+          <source :srcset="card.mobileImage" />
+          <img :src="card.mobileImage" :alt="card.mobileImage" srcset="">
+        </picture>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'DigitalJournalProject',
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          mobileImage: require('@/assets/images/digital-journal-view/cover.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/cover_2x.png'),
+        },
+        {
+          id: 2,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread1.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread1_2x.png'),
+        },
+        {
+          id: 3,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread2.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread2_2x.png'),
+        },
+        {
+          id: 4,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread3.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread3_2x.png'),
+        },
+        {
+          id: 5,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread4.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread4_2x.png'),
+        },
+        {
+          id: 6,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread5.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread5_2x.png'),
+        },
+        {
+          id: 7,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread6.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread6_2x.png'),
+        },
+        {
+          id: 8,
+          mobileImage: require('@/assets/images/digital-journal-view/Spread7.png'),
+          desktopImage: require('@/assets/images/digital-journal-view/Spread7_2x.png'),
+        },
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
+.card {
+  margin: 20px 0;
+}
+
 .card-divider {
   width: 50%;
   height: 2px;
