@@ -43,6 +43,9 @@ const router = createRouter({
     ? '/caryllou-portfolio-v2/'
     : '/',
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return savedPosition ? savedPosition : { top: 0 }
+  },
 });
 
 export default router;

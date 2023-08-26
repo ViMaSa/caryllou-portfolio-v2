@@ -22,7 +22,7 @@
         <picture>
           <source :srcset="card.desktopImage" media="(min-width: 750px)" />
           <source :srcset="card.mobileImage" />
-          <img :src="card.mobileImage" :alt="card.mobileImage" srcset="">
+          <img :src="card.mobileImage" :alt="card.mobileImage" />
         </picture>
       </div>
     </div>
@@ -77,7 +77,7 @@ export default {
         },
       ]
     }
-  }
+  },
 }
 </script>
 
