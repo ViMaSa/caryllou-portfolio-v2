@@ -2,18 +2,14 @@
   <div class="colliers-container">
     <div class="card">
       <div class="card-body">
-        <h2>
-          02
-        </h2>
+        <h2>02</h2>
         <div class="card-divider"/>
-        <div class="card-title"><strong>
-          Colliers
-        </strong></div>
+        <h5>Colliers</h5>
         <div class="card-divider"/>
-        <div class="card-text"> <br/>
+        <p class="card-text">
           Colliers is a commercial real estate company.
           As a graphic designer for them, I worked with the design manager and brokers to create materials such as brochures, email campaigns, social assets, and posters.
-        </div>
+        </p>
       </div>
     </div>
     <div class="card">
@@ -28,11 +24,10 @@
         <img :src="image2.mobile" :alt="image2.mobile" />
       </picture>
       <div class="card-body">
-        <h5 class="card-title">
-          Colliers Branded Projects
-        </h5>
+        <h5 class="card-title">Colliers Branded Projects</h5>
         <p class="card-text">
-          Most marketing materials adhere to branding guidelines. However, the layout of a page varies depending on the content provided.
+          Most marketing materials adhere to branding guidelines.
+          However, the layout of a page varies depending on the content provided.
         </p>
       </div>
     </div>
@@ -55,9 +50,7 @@
         <img :src="image5.mobile" :alt="image5.mobile" />
       </picture>
       <div class="card-body">
-        <h5 class="card-title">
-          Custom Projects
-        </h5>
+        <h5 class="card-title">Custom Projects</h5>
         <p class="card-text">
           Properties receive custom marketing collaterals depending on factors such as price, building size, location, or who the client is.
         </p>
@@ -89,9 +82,7 @@
         <img :src="image9.mobile" :alt="image9.mobile" />
       </picture>
       <div class="card-body">
-        <h5 class="card-title">
-          In-House Projects
-        </h5>
+        <h5 class="card-title">In-House Projects</h5>
         <p class="card-text">
           In-house projects consisted of posters of events happening in the office.
           It also includes social assets created for different broker teams, such as holiday greetings.
