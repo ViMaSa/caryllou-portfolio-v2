@@ -7,9 +7,13 @@
         <h5>Digital Journal</h5>
         <div class="card-divider"/>
         <p class="card-text">
-          This is a passion project that documents 2021.<br/><br/>
-          My goal was to design as much as possible in my free time and to explore design without any constraints you would normally face when working on a project for a client.<br/><br/>
-          Photos used were taken with a point and shoot camera, as I also wanted to learn more about shooting with and developing film. Featured here a several spreads with varying layouts.<br/><br/>
+          This is a passion project that documents 2021.
+        </p>
+        <p class="card-text">
+          My goal was to design as much as possible in my free time and to explore design without any constraints you would normally face when working on a project for a client.
+        </p>
+        <p class="card-text">
+          Photos used were taken with a point and shoot camera, as I also wanted to learn more about shooting with and developing film. Featured here a several spreads with varying layouts.
         </p>
       </div>
     </div>
@@ -87,6 +91,10 @@ export default {
   height: 2px;
   background-color: #a5b49d;
   margin: 0.5rem auto;
+}
+
+.card-text {
+  margin: 10px 20px;
 }
 
 .digital-journal-container {

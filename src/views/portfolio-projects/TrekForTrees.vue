@@ -7,8 +7,12 @@
         <h5>Trek For Trees</h5>
         <div class="card-divider"/>
         <p class="card-text">
-          <em>UNLV Graphic Design & Media Thesis</em><br/><br/>
-          <strong>Brief: </strong>Find a problem, in this case deforestation, and create a solution for it.<br/><br/>
+          <em>UNLV Graphic Design & Media Thesis</em>
+        </p>
+        <p class="card-text">
+          <strong>Brief: </strong>Find a problem, in this case deforestation, and create a solution for it.
+        </p>
+        <p class="card-text">
           <strong>Solution: </strong>With a focus on branding and identity, create a non-profit organization that raises awareness for deforestation.
         </p>
       </div>
