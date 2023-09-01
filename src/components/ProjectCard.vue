@@ -45,6 +45,7 @@ export default {
   min-width: 173px;
   max-width: 346px;
   border: none;
+  margin-bottom: 10px;
 }
 
 .card-divider {

@@ -31,12 +31,23 @@
         </div>
       </div>
     </div>
+    <FooterNav
+      :prevUrlLink="'/portfolio/trek-for-trees'"
+      :prevLinkText="'03. Trek for Trees'"
+      :nextUrlLink="'/portfolio/'"
+      :nextLinkText="'Portfolio Spread'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
+
 export default {
   name: 'LifeAquaticProject',
+  components: {
+    FooterNav,
+  },
   data() {
     return {
       images: [

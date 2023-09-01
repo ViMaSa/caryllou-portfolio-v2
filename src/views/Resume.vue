@@ -41,12 +41,23 @@
         </p>
       </div>
     </div>
+    <FooterNav
+      :prevUrlLink="'/portfolio'"
+      :prevLinkText="'Portfolio'"
+      :nextUrlLink="'/about'"
+      :nextLinkText="'About'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
+
 export default {
   name: 'ResumePage',
+  components: {
+    FooterNav,
+  },
 }
 </script>
 

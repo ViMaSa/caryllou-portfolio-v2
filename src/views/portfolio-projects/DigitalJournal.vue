@@ -26,12 +26,23 @@
         </picture>
       </div>
     </div>
+    <FooterNav
+      :prevUrlLink="'/portfolio'"
+      :prevLinkText="'Portfolio Spread'"
+      :nextUrlLink="'/portfolio/colliers'"
+      :nextLinkText="'02. Colliers'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
+
 export default {
   name: 'DigitalJournalProject',
+  components: {
+    FooterNav,
+  },
   data() {
     return {
       cards: [

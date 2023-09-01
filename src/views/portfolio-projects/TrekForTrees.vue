@@ -74,12 +74,23 @@
         <img :src="image7.mobile" :alt="image7.mobile" />
       </picture>
     </div>
+    <FooterNav
+      :prevUrlLink="'/portfolio/colliers'"
+      :prevLinkText="'02. Colliers'"
+      :nextUrlLink="'/portfolio/life-aquatic'"
+      :nextLinkText="'04. Life Aquatic'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
+
 export default {
   name: 'TrekForTreesProject',
+  components: {
+    FooterNav,
+  },
   data() {
     return {
       image1: {

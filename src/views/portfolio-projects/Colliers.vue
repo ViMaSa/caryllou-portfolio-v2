@@ -89,12 +89,23 @@
         </p>
       </div>
     </div>
+    <FooterNav
+      :prevUrlLink="'/portfolio/digital-journal'"
+      :prevLinkText="'01. Digital Journal'"
+      :nextUrlLink="'/portfolio/trek-for-trees'"
+      :nextLinkText="'03. Trek for Trees'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
+
 export default {
   name: 'colliers-project',
+  components: {
+    FooterNav,
+  },
   data() {
     return {
       image1: {

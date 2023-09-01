@@ -1,28 +1,37 @@
 <template>
-  <div class="portfolio-spread">
-    <div class="d-flex flex-wrap justify-content-evenly">
-      <div
-        v-for="(card, index) in cards"
-        :key="card.id"
-        :class="index % 2 === 0 ? 'slide-right' : 'slide-left'"
-      >
-        <ProjectCard
-          :image="card.image"
-          :number="card.number"
-          :title="card.title"
-          :titleURL="card.titleURL"
-        />
+  <div class="portfolio-spread-container">
+    <div class="card bg-transparent border-0 d-flex justify-content-around">
+        <div
+          v-for="(card, index) in cards"
+          :key="card.id"
+          :class="index % 2 === 0 ? 'slide-right' : 'slide-left'"
+        >
+          <ProjectCard
+            :image="card.image"
+            :number="card.number"
+            :title="card.title"
+            :titleURL="card.titleURL"
+          />
       </div>
     </div>
+    <FooterNav
+      class="portfolio-spread-footer"
+      :prevUrlLink="'/about'"
+      :prevLinkText="'About'"
+      :nextUrlLink="'/resume'"
+      :nextLinkText="'Resume'"
+    />
   </div>
 </template>
 
 <script>
+import FooterNav from '@/components/FooterNav.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
   name: 'PortfolioSpread',
   components: {
+    FooterNav,
     ProjectCard,
   },
   data() {
@@ -89,8 +98,11 @@ export default {
   animation-name: slideRight;
 }
 
-.portfolio-spread {
-  background: white;
-  min-height: 100vh;
+.portfolio-spread-container {
+  margin: 0 auto
+}
+
+.portfolio-spread-footer {
+  margin: 0 10px 20px 10px;
 }
 </style>
