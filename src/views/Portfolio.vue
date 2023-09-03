@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio-spread-container">
-    <div class="card bg-transparent border-0 d-flex justify-content-around">
+    <div class="card bg-transparent border-0 d-flex flex-row flex-wrap justify-content-around">
         <div
           v-for="(card, index) in cards"
           :key="card.id"
