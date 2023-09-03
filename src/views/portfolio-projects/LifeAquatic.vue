@@ -22,7 +22,7 @@
     <div class="card">
       <h4 class="card-title">Branding & Identity</h4>
       <div v-for="(image) in images" :key="image.id">
-        <div class="card-body">
+        <div class="card-body d-flex justify-content-center">
           <picture>
             <source :srcset="image.desktop" media="(min-width: 750px)" />
             <source :srcset="image.mobile" />
