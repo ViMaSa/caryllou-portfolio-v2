@@ -19,35 +19,24 @@
     </div>
     <div class="card">
       <h5 class="card-title">Logo Development</h5>
-      <picture>
-        <source :srcset="image1.desktop" media="(min-width: 750px)" />
-        <source :srcset="image1.mobile" />
-        <img :src="image1.mobile" :alt="image1.mobile" />
-      </picture>
-      <picture>
-        <source :srcset="image2.desktop" media="(min-width: 750px)" />
-        <source :srcset="image2.mobile" />
-        <img :src="image2.mobile" :alt="image2.mobile" />
-      </picture>
-      <picture>
-        <source :srcset="image3.desktop" media="(min-width: 750px)" />
-        <source :srcset="image3.mobile" />
-        <img :src="image3.mobile" :alt="image3.mobile" />
-      </picture>
+      <div v-for="(image) in imageSet1" :key="image.id">
+        <picture>
+          <source :srcset="image.desktop" media="(min-width: 750px)" />
+          <source :srcset="image.mobile" />
+          <img :src="image.mobile" :alt="image.mobile" />
+        </picture>
+      </div>
     </div>
     <div class="card">
       <h5 class="card-title">Postcard & Takeaway</h5>
       <div class="picture-row-container">
-        <picture>
-          <source :srcset="image4.desktop" media="(min-width: 750px)" />
-          <source :srcset="image4.mobile" />
-          <img :src="image4.mobile" :alt="image4.mobile" />
-        </picture>
-        <picture>
-          <source :srcset="image5.desktop" media="(min-width: 750px)" />
-          <source :srcset="image5.mobile" />
-          <img :src="image5.mobile" :alt="image5.mobile" />
-        </picture>
+        <div v-for="(image) in imageSet2" :key="image.id">
+          <picture>
+            <source :srcset="image.desktop" media="(min-width: 750px)" />
+            <source :srcset="image.mobile" />
+            <img :src="image.mobile" :alt="image.mobile" />
+          </picture>
+        </div>
       </div>
       <p class="card-text">
         <strong>Left: </strong>Postcard that is mailed out inviting people to visit an immersive installation that shows the effects of deforestation.<br/>
@@ -93,26 +82,35 @@ export default {
   },
   data() {
     return {
-      image1: {
-        mobile: require('@/assets/images/trek-for-trees-view/LogoDev1.png'),
-        desktop: require('@/assets/images/trek-for-trees-view/LogoDev1_2x.png'),
-      },
-      image2: {
-        mobile: require('@/assets/images/trek-for-trees-view/LogoDev2.png'),
-        desktop: require('@/assets/images/trek-for-trees-view/LogoDev2_2x.png'),
-      },
-      image3: {
-        mobile: require('@/assets/images/trek-for-trees-view/LogoDev3.png'),
-        desktop: require('@/assets/images/trek-for-trees-view/LogoDev3_2x.png'),
-      },
-      image4: {
-        mobile: require('@/assets/images/trek-for-trees-view/Postcard.png'),
-        desktop: require('@/assets/images/trek-for-trees-view/Postcard_2x.png'),
-      },
-      image5: {
-        mobile: require('@/assets/images/trek-for-trees-view/Takeaway.png'),
-        desktop: require('@/assets/images/trek-for-trees-view/Takeaway_2x.png'),
-      },
+      imageSet1: [
+        {
+          id: 1,
+          mobile: require('@/assets/images/trek-for-trees-view/LogoDev1.png'),
+          desktop: require('@/assets/images/trek-for-trees-view/LogoDev1_2x.png'),
+        },
+        {
+          id: 2,
+          mobile: require('@/assets/images/trek-for-trees-view/LogoDev2.png'),
+          desktop: require('@/assets/images/trek-for-trees-view/LogoDev2_2x.png'),
+        },
+        {
+          id: 3,
+          mobile: require('@/assets/images/trek-for-trees-view/LogoDev3.png'),
+          desktop: require('@/assets/images/trek-for-trees-view/LogoDev3_2x.png'),
+        },
+      ],
+      imageSet2: [
+        {
+          id: 4,
+          mobile: require('@/assets/images/trek-for-trees-view/Postcard.png'),
+          desktop: require('@/assets/images/trek-for-trees-view/Postcard_2x.png'),
+        },
+        {
+          id: 5,
+          mobile: require('@/assets/images/trek-for-trees-view/Takeaway.png'),
+          desktop: require('@/assets/images/trek-for-trees-view/Takeaway_2x.png'),
+        },
+      ],
       image6: {
         mobile: require('@/assets/images/trek-for-trees-view/Trek_FullMockups.png'),
         desktop: require('@/assets/images/trek-for-trees-view/Trek_FullMockups_2x.png'),

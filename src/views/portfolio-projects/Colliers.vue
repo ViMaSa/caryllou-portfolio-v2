@@ -13,16 +13,13 @@
       </div>
     </div>
     <div class="card">
-      <picture>
-        <source :srcset="image1.desktop" media="(min-width: 750px)" />
-        <source :srcset="image1.mobile" />
-        <img :src="image1.mobile" :alt="image1.mobile" />
-      </picture>
-      <picture>
-        <source :srcset="image2.desktop" media="(min-width: 750px)" />
-        <source :srcset="image2.mobile" />
-        <img :src="image2.mobile" :alt="image2.mobile" />
-      </picture>
+      <div v-for="(image) in imageSet1" :key="image.id">
+        <picture>
+          <source :srcset="image.desktop" media="(min-width: 750px)" />
+          <source :srcset="image.mobile" />
+          <img :src="image.mobile" :alt="image.mobile" />
+        </picture>
+      </div>
       <div class="card-body">
         <h5 class="card-title">Colliers Branded Projects</h5>
         <p class="card-text">
@@ -64,16 +61,13 @@
           <img :src="image6.mobile" :alt="image6.mobile" />
         </picture>
         <div class="right-half-images">
-          <picture>
-            <source :srcset="image7.desktop" media="(min-width: 750px)" />
-            <source :srcset="image7.mobile" />
-            <img :src="image7.mobile" :alt="image7.mobile" />
-          </picture>
-          <picture>
-            <source :srcset="image8.desktop" media="(min-width: 750px)" />
-            <source :srcset="image8.mobile" />
-            <img :src="image8.mobile" :alt="image8.mobile" />
-          </picture>
+          <div v-for="(image) in imageSet3" :key="image.id">
+            <picture>
+              <source :srcset="image.desktop" media="(min-width: 750px)" />
+              <source :srcset="image.mobile" />
+              <img :src="image.mobile" :alt="image.mobile" />
+            </picture>
+          </div>
         </div>
       </div>
       <picture>
@@ -108,14 +102,18 @@ export default {
   },
   data() {
     return {
-      image1: {
-        mobile: require('@/assets/images/colliers-view/group1S1.png'),
-        desktop: require('@/assets/images/colliers-view/group1S1_2x.png'),
-      },
-      image2: {
-        mobile: require('@/assets/images/colliers-view/group1S2.png'),
-        desktop: require('@/assets/images/colliers-view/group1S2_2x.png'),
-      },
+      imageSet1: [
+        {
+          id: 1,
+          mobile: require('@/assets/images/colliers-view/group1S1.png'),
+          desktop: require('@/assets/images/colliers-view/group1S1_2x.png'),
+        },
+        {
+          id: 2,
+          mobile: require('@/assets/images/colliers-view/group1S2.png'),
+          desktop: require('@/assets/images/colliers-view/group1S2_2x.png'),
+        },
+      ],
       image3: {
         mobile: require('@/assets/images/colliers-view/group2S1.png'),
         desktop: require('@/assets/images/colliers-view/group2S1_2x.png'),
@@ -132,14 +130,18 @@ export default {
         mobile: require('@/assets/images/colliers-view/group3S1.png'),
         desktop: require('@/assets/images/colliers-view/group3S1_2x.png'),
       },
-      image7: {
-        mobile: require('@/assets/images/colliers-view/group3S2.png'),
-        desktop: require('@/assets/images/colliers-view/group3S2_2x.png'),
-      },
-      image8: {
-        mobile: require('@/assets/images/colliers-view/group3S3.png'),
-        desktop: require('@/assets/images/colliers-view/group3S3_2x.png'),
-      },
+      imageSet3: [
+        {
+          id: 7,
+          mobile: require('@/assets/images/colliers-view/group3S2.png'),
+          desktop: require('@/assets/images/colliers-view/group3S2_2x.png'),
+        },
+        {
+          id: 8,
+          mobile: require('@/assets/images/colliers-view/group3S3.png'),
+          desktop: require('@/assets/images/colliers-view/group3S3_2x.png'),
+        },
+      ],
       image9: {
         mobile: require('@/assets/images/colliers-view/group3S4.png'),
         desktop: require('@/assets/images/colliers-view/group3S4_2x.png'),
